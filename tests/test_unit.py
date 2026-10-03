@@ -1,6 +1,6 @@
 from unittest.mock import MagicMock, patch
 
-from app.llm_service import generate_response
+from app.llm_service import generate_response, generate_json
 
 
 def _fake(text):
@@ -19,3 +19,8 @@ def test_prompt_is_sent_to_model():
         generate_response("my prompt")
     sent = mock_chat.call_args.kwargs["messages"][0]["content"]
     assert sent == "my prompt"
+
+
+def test_generate_json_parses_output():
+    with patch("app.llm_service.chat", return_value=_fake('{"sentiment": "positive"}')):
+        assert generate_json("x") == {"sentiment": "positive"}
