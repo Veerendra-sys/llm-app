@@ -1,5 +1,5 @@
    [
-     {"input": "Explain machine learning in one sentence.", "expected_keyword": "banana"},
-     {"input": "What is Python?", "expected_keyword": "banana"},
-     {"input": "What is the capital of France?", "expected_keyword": "banana"}
+     {"input": "Explain machine learning in one sentence.", "expected_keyword": "data"},
+     {"input": "What is Python?", "expected_keyword": "programming"},
+     {"input": "What is the capital of France?", "expected_keyword": "paris"}
    ]
