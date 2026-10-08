@@ -184,7 +184,30 @@ docker run --rm llm-app
 ```
 
 ---
+Quick Execution Guide
 
+From the project root (llm-app):
+
+# 1. Create virtual environment
+python -m venv venv
+
+# 2. Activate virtual environment
+.\venv\Scripts\Activate.ps1
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Make sure Ollama is installed and the model is available
+ollama pull qwen2.5:1.5b
+
+# 5. Run unit tests
+pytest
+
+# 6. Run LLM evaluations
+python -m evals.run_evals
+
+# 7. Run the application
+python -m app
 # CI/CD Pipeline
 
 The project includes a GitHub Actions workflow.
