@@ -1,7 +1,7 @@
 from unittest.mock import MagicMock, patch
 
 from app.llm_service import generate_response, generate_json
-
+#"I use patch and MagicMock to mock the LLM API call. This allows me to test my application logic without making an actual LLM/API request."
 
 def _fake(text):
     fake = MagicMock()
